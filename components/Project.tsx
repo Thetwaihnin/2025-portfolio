@@ -56,17 +56,17 @@ export default function App() {
         <Swipedown />
       ) : (
         <div className="grid grid-cols-4 w-full p-6 h-full gap-6">
-          <div className="gap-3 flex flex-col p-2 h-[600px] overflow-x-hidden overflow-y-auto">
+          <div className="gap-3 grid-rows-4 p-2 max-h-[600px] overflow-x-hidden overflow-y-auto">
             {projectData.map((movie, i) => (
               <div
                 key={i}
                 onClick={() => setSelectedImage(movie)}
-                className="boxs relative rounded-2xl overflow-hidden border-2 border-cyan-300 cursor-pointer shadow-xl hover:drop-shadow-[0_0_10px_black] hover:scale-105 duration-300"
+                className="boxs relative rounded-2xl mb-3 overflow-hidden border-2 border-cyan-300 cursor-pointer shadow-xl hover:drop-shadow-[0_0_10px_black] hover:scale-105 duration-300"
               >
                 <img
                   src={movie.src}
                   alt={movie.title}
-                  className="w-full h-[300px] object-cover rounded-2xl"
+                  className="w-full h-[200px] object-cover rounded-2xl"
                 />
               </div>
             ))}
@@ -89,23 +89,36 @@ export default function App() {
                 <h3 className="text-3xl font-serif mx-2 ">
                   {selectedImage.title}
                 </h3>
-                <p className="text-xl font-serif mx-2 w-2/3 mt-3">{selectedImage.description}</p>
+                <p className="text-xl font-serif mx-2 w-2/3 mt-3">
+                  {selectedImage.description}
+                </p>
                 <div className="flex mt-4">
-                  <button className="px-3 hover:bg-blue-500 transition duration-300 cursor-pointer mx-2 rounded-lg py-2 bg-slate-500 font-obitron">
+                  {/* <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  > */}
+                  <button
+                    onClick={() => alert("Demo video is not uploaded yet!")}
+                    className="px-3 hover:bg-blue-500 transition duration-300 cursor-pointer mx-2 rounded-lg py-2 bg-slate-500 font-obitron"
+                  >
                     Demo Video
                   </button>
-                    <a
-                      href={selectedImage.source}
-                      title="source"
-                      className="rounded-md px-3 py-2 bg-cyan-50 cursor-pointer "
-                    >
-                      <Image
-                        src="/github.png"
-                        alt="github"
-                        width={25}
-                        height={25}
-                      />
-                    </a>
+
+                  {/* </a> */}
+
+                  <a
+                    href={selectedImage.source}
+                    title="source"
+                    className="rounded-md px-3 py-2 hover:bg-cyan-500 bg-cyan-50 cursor-pointer "
+                  >
+                    <Image
+                      src="/github.png"
+                      alt="github"
+                      width={25}
+                      height={25}
+                    />
+                  </a>
                 </div>
               </div>
             </div>

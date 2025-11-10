@@ -2,29 +2,34 @@ export const projectData = [
   {
     title: "Gaming Website",
     description: "Award Gaming Website",
-    src: "/projects/contact-image.jpeg",
+    src: "/projects/game-web.png",
     source: "https://github.com/Thetwaihnin/Gaming-Web.git",
     demo: "https://astounding-lamington-367179.netlify.app/"
   },
   {
     title: "Converse Website",
     description:
-      "Designed and built a fully responsive Converse website using React,TypeScript and Tailwind CSS. Implemented REact Router to crate a multi-page experience  with routes.",
-    src: "/projects/crop_image.jpg",
+      "Designed and built a fully responsive Converse website using React,TypeScript and Tailwind CSS. Implemented React Router to crate a multi-page experience  with routes.",
+    src: "/projects/converseSite.png",
     source: "https://github.com/Thetwaihnin/converse-store-app.git",
   },
   {
-    title: "Gym Website (React + Tailwind CSS)",
+    title: "Job Application Tracking App",
     description:
-      "Developed a responsive gym fitness website using React.js and Tailwind CSS. I followed a Youtube tutorial for guidance and enhanced the project.",
-    src: "/projects/download.png",
-    source: "https://github.com/Thetwaihnin/gym-app-react.git",
+      "Currently developing a fullstack Job Applications Tracking App mainly using Next.js, MUI, NextAuth, and Prisma. It includes user authentication, job application management, and status tracking.",
+    src: "/projects/job.png",
+    source: "https://github.com/Thetwaihnin/Job-application-tracking.git",
   },
-
   {
     title: "Twitter Clone",
-    description: "Responsive twitter clone",
-    src: "/projects/Gaming.png",
+    description: "Developed a responsive Twitter interface clone using React and Tailwind CSS, replicating the layout, feed design, and UI interactions (UI only, no backend).",
+    src: "/projects/twitter.png",
     source: "https://github.com/Thetwaihnin/Twitter-clone.git",
+  },
+  {
+    title: "Mini Birthday Card",
+    description: "Responsive halloween theme birthday cards built with Next.js and TypeScript, featuring an interactive page-flip animation for a more realistic card experience",
+    src: "/projects/birthday-card.png",
+    source: "https://github.com/Thetwaihnin/Ghoul.git",
   },
 ];

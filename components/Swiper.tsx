@@ -1,4 +1,4 @@
-<Swiper
+{/* <Swiper
         effect={"coverflow"}
         loop={true}
         navigation={true}
@@ -25,7 +25,6 @@
                 className="w-full h-[400px] rounded-2xl object-cover block cursor-pointer "
               />
 
-              {/* Movie text */}
               <div className="absolute bg-amber-300 bottom-0 left-0 right-0 p-5 bg-linear-to-t from-black/80 to-transparent">
                 <h2 className="text-white text-xl font-bold">{movie.title}</h2>
                 <p className="text-white/70 text-sm mt-1">
@@ -35,4 +34,4 @@
             </div>
           </SwiperSlide>
         ))}
-      </Swiper>
+      </Swiper> */}

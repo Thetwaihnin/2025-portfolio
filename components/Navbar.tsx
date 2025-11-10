@@ -1,8 +1,6 @@
 "use client";
-// import { Bars3Icon } from "@heroicons/react/16/solid";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-// import { setTimeout } from "timers/promises";
 
 const navItems = [
   { name: "Home", id: "home" },

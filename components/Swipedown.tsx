@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Mousewheel, Pagination } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 import Image from "next/image";
 import { projectData } from "@/app/data/project";
 import { useEffect, useRef } from "react";

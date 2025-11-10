@@ -6,7 +6,6 @@ import Navbar from "@/components/Navbar";
 import { useState } from "react";
 import Sidebar from "@/components/Sidebar";
 import { Bars3Icon } from "@heroicons/react/16/solid";
-import Image from "next/image";
 import Project from "@/components/Project";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
