@@ -45,7 +45,7 @@ export default function App() {
 
   return (
     <div
-      className="w-full relative flex flex-col p-6 justify-center items-center min-h-screen"
+      className="w-full h-full relative flex flex-col p-6 justify-center items-center md:min-h-screen"
       id="projects"
     >
       <div className="w-full font-obitron mb-6 text-center text-cyan-300 font-bold text-3xl">
@@ -55,7 +55,7 @@ export default function App() {
       {isMobile ? (
         <Swipedown />
       ) : (
-        <div className="grid grid-cols-4 w-full p-6 h-full">
+        <div className="grid grid-cols-4 w-full p-6 h-full gap-6">
           <div className="gap-3 flex flex-col p-2 h-[600px] overflow-x-hidden overflow-y-auto">
             {projectData.map((movie, i) => (
               <div
@@ -72,30 +72,30 @@ export default function App() {
             ))}
           </div>
 
-          <div className="col-span-3 w-auto h-[600px] p-2">
-            <div className="relative w-full h-full border-2 border-cyan-300 rounded-2xl overflow-hidden flex justify-center items-center">
+          <div className="col-span-3 w-auto h-[600px] p-2 bg-amber-50 rounded-2xl">
+            <div className="relative w-full h-full border-2  rounded-2xl overflow-hidden flex justify-center items-center">
               <Image
                 src={selectedImage.src}
                 alt="Selected Project"
                 width={1200}
                 height={600}
-                className="max-w-full max-h-full object-contai rounded-xl"
+                className="max-w-full h-full object-conta rounded-xl"
               />
 
               <div
                 ref={overlayRef}
-                className="absolute cursor-pointer inset-0 bg-black/60 flex flex-col justify-end p-4 text-white"
+                className="absolute cursor-pointer items-center justify-center text-center inset-0 bg-black/60 flex flex-col p-4 text-white"
               >
-                <h3 className="text-xl font-serif mx-2">
+                <h3 className="text-3xl font-serif mx-2 ">
                   {selectedImage.title}
                 </h3>
-                <p className="text-md text-serif mx-2">{selectedImage.description}</p>
+                <p className="text-xl font-serif mx-2 w-2/3 mt-3">{selectedImage.description}</p>
                 <div className="flex mt-4">
                   <button className="px-3 hover:bg-blue-500 transition duration-300 cursor-pointer mx-2 rounded-lg py-2 bg-slate-500 font-obitron">
                     Demo Video
                   </button>
                     <a
-                      href="#"
+                      href={selectedImage.source}
                       title="source"
                       className="rounded-md px-3 py-2 bg-cyan-50 cursor-pointer "
                     >

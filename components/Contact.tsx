@@ -1,7 +1,11 @@
 "use client";
 
-import Image from "next/image";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { useRef } from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 type Inputs = {
   name: string;
@@ -10,12 +14,62 @@ type Inputs = {
 };
 
 const Contact = () => {
+  const textRef1 = useRef<HTMLParagraphElement | null>(null);
+  const textRef2 = useRef<HTMLParagraphElement | null>(null);
+  const formRef = useRef<HTMLFormElement | null>(null);
+
   const {
     register,
     trigger,
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
+
+  useGSAP(() => {
+    const tl1 = textRef1.current;
+    const tl2 = textRef2.current;
+    const form = formRef.current;
+
+    gsap.fromTo(
+      form,
+      { opacity: 0, x: 300 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 2,
+        scrollTrigger: {
+          trigger: form,
+          // scrub: 1,
+        },
+      }
+    );
+    gsap.fromTo(
+      tl1,
+      { scale: 4, x: -100 },
+      {
+        x: 0,
+        scale: 1,
+        duration: 2,
+        scrollTrigger: {
+          trigger: tl1,
+          // scrub: 1,
+        },
+      }
+    );
+    gsap.fromTo(
+      tl2,
+      { scale: 0, x: 100 },
+      {
+        x: 0,
+        scale: 1,
+        duration: 2,
+        scrollTrigger: {
+          trigger: tl2,
+          // scrub: 1,
+        },
+      }
+    );
+  }, []);
 
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     // Trigger validation manually
@@ -48,10 +102,16 @@ const Contact = () => {
               <path d="M0 240v120a120 120 0 0 1 120 120h120A240 240 0 0 0 0 240Z"></path>
             </g>
           </svg>
-          <p className="md:text-7xl text-5xl text-amber-300 text-shadow-lg hover:text-shadow-amber-50 text-shadow-[#D0083A]  font-obitron font-bold mx-6">
+          <p
+            ref={textRef1}
+            className="md:text-7xl contact text-5xl text-amber-300 text-shadow-lg hover:text-shadow-amber-50 text-shadow-[#D0083A]  font-obitron font-bold mx-6"
+          >
             Contact
           </p>
-          <p className="md:text-7xl text-5xl text-amber-300 text-shadow-lg hover:text-shadow-amber-50 text-shadow-[#D0083A] font-bold font-obitron">
+          <p
+            ref={textRef2}
+            className="md:text-7xl me text-5xl text-amber-300 text-shadow-lg hover:text-shadow-amber-50 text-shadow-[#D0083A] font-bold font-obitron"
+          >
             ______Me
           </p>
           <p className="md:text-xl text-lg mt-8 text-amber-50 font-obitron">
@@ -70,6 +130,7 @@ const Contact = () => {
           </div>
         </div>
         <form
+          ref={formRef}
           method="POST"
           target="_blank"
           action="https://formsubmit.co/thetwaihninsone@gmail.com"
@@ -133,7 +194,7 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="drop-shadow-[0_0_4px_black] mt-4 cursor-pointer font-obitron bg-[#D0083A] text-blue-200 font-semibold px-4 py-2 hover:bg-orange-400 rounded-md bg-blue hover:text-white transition duration-300"
+            className="drop-shadow-[0_0_4px_black] mt-4 cursor-pointer font-obitron bg-cyan-500  font-semibold px-4 py-2 hover:bg-orange-400 rounded-md bg-blue hover:text-white transition duration-300"
           >
             SEND
           </button>

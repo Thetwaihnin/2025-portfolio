@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
 import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);
 
 const AboutMe = () => {
   const ref = useRef(null);
@@ -18,7 +18,7 @@ const AboutMe = () => {
 
   useGSAP(
     () => {
-      const boxes = gsap.utils.toArray(".boxs");
+      const boxes = gsap.utils.toArray<HTMLElement>(".boxs");
       boxes.forEach((box) => {
         gsap.fromTo(
           box,
@@ -26,12 +26,12 @@ const AboutMe = () => {
           {
             x: 0,
             opacity: 1,
-            ease: "poweri.out",
+            ease: "power1.out",
             scrollTrigger: {
               trigger: box,
               start: "bottom bottom",
               end: "top 90%",
-              // scrub: 1,
+              scrub: 1,
               toggleActions: "play none none none",
             },
           }
@@ -52,7 +52,7 @@ const AboutMe = () => {
         duration: 1,
         scrollTrigger: {
           trigger: el,
-          // scrub: 1,
+          scrub: 1,
         },
       }
     );
@@ -65,7 +65,7 @@ const AboutMe = () => {
         duration: 2,
         scrollTrigger: {
           trigger: el,
-          // scrub: 1,
+          scrub: 1,
         },
       }
     );
@@ -103,14 +103,12 @@ const AboutMe = () => {
           />
         </div>
         <div className="md:mt-4 md:w-2/3 w-[90%]">
-          <p className="font-serif text-xl text-cyan-50">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
-            quam necessitatibus cum, sint expedita minima voluptate excepturi
-            sed consequatur dolorem, neque facilis eos odit ipsa aliquid dolorum
-            debitis voluptas quo.
+          <p className="font-serif text-xl text-cyan-50 ">
+            I’m a frontend developer who enjoys building clean, responsive, and user-focused interfaces. I work mainly with React, Next.js, TypeScript, 
+            Tailwind CSS, and modern UI libraries. I love turning ideas into polished products and continuously improving my skills through real projects
           </p>
         </div>
-        <div className="md:w-2/3 z-0 w-[90%] absolute h-2/3 shadow-md shadow-cyan-300 -bottom-10 bg-white/20 rounded-3xl" />
+        <div className="md:w-2/3 z-0 w-[95%] absolute h-2/3 shadow-md shadow-cyan-300 -bottom-10 bg-white/20 rounded-3xl" />
       </div>
       <div
         id="rightColumn"
@@ -164,11 +162,8 @@ const AboutMe = () => {
           </h1>
           <div className="mt-4">
             <p className="font-obitron text-lg text-white">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod
-              quas impedit delectus temporibus iste optio consectetur possimus,
-              exercitationem voluptates sunt? temporibus iste optio consectetur
-              possimus, exercitationem voluptates sunt? Lorem ipsum dolor sit,
-              amet consectetur adipisicing elit. Quod quas impedit delectus
+              Completed a 3-month training program, contributing to UI development,
+               API integration, and feature implementation using Next.js, MUI, and Laravel.
             </p>
           </div>
         </div>

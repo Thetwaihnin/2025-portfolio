@@ -46,13 +46,13 @@ export default function Swipedown() {
 
   return (
     <Swiper
-      direction="vertical"
+      direction="horizontal"
       slidesPerView={1}
       spaceBetween={30}
       mousewheel
       loop={true}
       pagination={{ clickable: true }}
-      modules={[Mousewheel, Pagination]}
+      modules={[ Mousewheel,Pagination]}
       className="swiper rounded-2xl"
     >
       {projectData.map((p, i) => (
@@ -63,7 +63,7 @@ export default function Swipedown() {
               alt={p.title}
               width={1200}
               height={600}
-              className="max-w-full max-h-full object-contain rounded-xl"
+              className="max-w-full max-h-full object-conver rounded-xl"
             />
 
             <div

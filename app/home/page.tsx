@@ -143,7 +143,7 @@ const Home = () => {
 
           <image
             href="/caroline_cat.png"
-            width="100"
+            width="70"
             height="100"
             clipPath="url(#blob-clip)"
             preserveAspectRatio="xMidYMid slice"
