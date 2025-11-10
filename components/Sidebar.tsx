@@ -45,7 +45,7 @@ const Sidebar = ({ setClick }: Props) => {
           <a className="flex cursor-pointer items-center px-4 py-2 mt-5 text-cyan-300 hover:bg-[#343454] rounded-md" href="#projects">
             <span className="mx-4 font-medium">Projects</span>
           </a>
-          <a className="flex cursor-pointer items-center px-4 py-2 mt-5 text-cyan-300 hover:bg-[#343454] rounded-md" href="#skills">
+          <a className="flex cursor-pointer items-center px-4 py-2 mt-5 text-cyan-300 hover:bg-[#343454] rounded-md" href="#skill">
             <span className="mx-4 font-medium">Skills</span>
           </a>
           <a className="flex cursor-pointer items-center px-4 py-2 mt-5 text-cyan-300 hover:bg-[#343454] rounded-md" href="#contact">
