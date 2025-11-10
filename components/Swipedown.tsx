@@ -52,7 +52,7 @@ export default function Swipedown() {
       mousewheel
       loop={true}
       pagination={{ clickable: true }}
-      modules={[ Mousewheel,Pagination]}
+      modules={[Pagination]}
       className="swiper rounded-2xl"
     >
       {projectData.map((p, i) => (
@@ -74,6 +74,23 @@ export default function Swipedown() {
             >
               <h3 className="text-lg font-semibold">{p.title}</h3>
               <p className="text-sm">{p.description}</p>
+              <div className="flex mt-4 justify-center">
+                <button className="px-3 hover:bg-blue-500 transition duration-300 cursor-pointer mx-2 rounded-lg py-2 bg-slate-500 font-obitron">
+                  Demo Video
+                </button>
+                <a
+                  href={p.source}
+                  title="source"
+                  className="rounded-md px-3 py-2 bg-cyan-50 cursor-pointer "
+                >
+                  <Image
+                    src="/github.png"
+                    alt="github"
+                    width={25}
+                    height={25}
+                  />
+                </a>
+              </div>
             </div>
           </div>
         </SwiperSlide>

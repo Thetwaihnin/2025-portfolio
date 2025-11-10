@@ -115,7 +115,7 @@ const Home = () => {
         <svg
           viewBox="0 0 100 100"
           xmlns="http://www.w3.org/2000/svg"
-          className="w-full h-full drop-shadow-[0_0_15px_cyan]"
+          className="w-full h-full drop-shadow-[0_0_15px_cyan] scale-125 md:scale-100"
         >
           <defs>
             <linearGradient id="sw-gradient" x1="0" x2="1" y1="1" y2="0">
@@ -142,8 +142,8 @@ const Home = () => {
           />
 
           <image
-            href="/caroline_cat.png"
-            width="70"
+            href="/profile3.png"
+            width="100"
             height="100"
             clipPath="url(#blob-clip)"
             preserveAspectRatio="xMidYMid slice"
@@ -151,7 +151,7 @@ const Home = () => {
         </svg>
       </div>
       <div
-        className="flex flex-col mb-6 md:mb-0 relative overflow-x-hidden justify-center items-center md:items-start"
+        className="flex flex-col my-6 md:my-0 relative overflow-x-hidden justify-center items-center md:items-start"
         ref={col2Ref}
       >
         <Image

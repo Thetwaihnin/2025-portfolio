@@ -104,8 +104,7 @@ const AboutMe = () => {
         </div>
         <div className="md:mt-4 md:w-2/3 w-[90%]">
           <p className="font-serif text-xl text-cyan-50 ">
-            I’m a frontend developer who enjoys building clean, responsive, and user-focused interfaces. I work mainly with React, Next.js, TypeScript, 
-            Tailwind CSS, and modern UI libraries. I love turning ideas into polished products and continuously improving my skills through real projects
+              Frontend developer focused on building clean, responsive, and modern interfaces using React, Next.js, TypeScript, and Tailwind. Always learning and improving through hands-on projects.
           </p>
         </div>
         <div className="md:w-2/3 z-0 w-[95%] absolute h-2/3 shadow-md shadow-cyan-300 -bottom-10 bg-white/20 rounded-3xl" />
@@ -125,13 +124,12 @@ const AboutMe = () => {
           <div className="mt-3">
             <ul className="font-serif text-lg text-black">
               <li>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Voluptas, aperiam.
+                I'm interested in building beautiful, fast user interfaces, exploring UI animations, and learning more about full-stack development as I grow.
               </li>
-              <li>
+              {/* <li>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic,
                 modi!
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
@@ -143,7 +141,7 @@ const AboutMe = () => {
             Education
           </h1>
           <div className="mt-3">
-            <ul className="font-obitron text-lg text-black">
+            <ul className="font-serif text-lg text-black">
               <li>
                 University of Computer Studies, Yangon (2020)
               </li>
@@ -161,7 +159,7 @@ const AboutMe = () => {
             Experience
           </h1>
           <div className="mt-4">
-            <p className="font-obitron text-lg text-white">
+            <p className="font-serif text-lg text-white">
               Completed a 3-month training program, contributing to UI development,
                API integration, and feature implementation using Next.js, MUI, and Laravel.
             </p>

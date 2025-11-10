@@ -3,7 +3,6 @@
 import Image from "next/image";
 import ProgressCircle from "./ProgressCirlce";
 import { skills } from "@/app/data/skill";
-import { useRef, useEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import SkillAnimation from "./SkillAnimation";
