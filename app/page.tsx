@@ -16,7 +16,7 @@ export default function page() {
 
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <div className="fixed top-3 z-30 right-4">
         <Bars3Icon
           className="md:hidden w-8 h-8 text-white cursor-pointer"
@@ -24,17 +24,19 @@ export default function page() {
         />
       </div>
       <div className="fixed top-3 z-30 left-4">
-        <h1 className="font-obitron font-bold text-cyan-300 md:hidden text-3xl">Wei</h1>
+        <h1 className="font-obitron font-bold text-cyan-300 md:hidden text-3xl">
+          Wei
+        </h1>
       </div>
       <main className="flex flex-col overflow-x-hidden min-h-screen w-full">
         <Home />
         <AboutMe />
-        <Skill/>
-        <Project/>
-        <Contact/>
+        <Skill />
+        <Project />
+        <Contact />
       </main>
       {click && <Sidebar setClick={setClick} />}
-      <Footer/>
+      <Footer />
     </>
   );
 }
