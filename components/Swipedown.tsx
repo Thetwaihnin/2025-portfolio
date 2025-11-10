@@ -75,7 +75,7 @@ export default function Swipedown() {
               <h3 className="text-lg font-semibold">{p.title}</h3>
               <p className="text-sm">{p.description}</p>
               <div className="flex mt-4 justify-center">
-                <button className="px-3 hover:bg-blue-500 transition duration-300 cursor-pointer mx-2 rounded-lg py-2 bg-slate-500 font-obitron">
+                <button onClick={() => alert("Demo video is not uploaded yet!")} className="px-3 hover:bg-blue-500 transition duration-300 cursor-pointer mx-2 rounded-lg py-2 bg-slate-500 font-obitron">
                   Demo Video
                 </button>
                 <a
